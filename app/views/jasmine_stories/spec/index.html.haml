@@ -1,0 +1,10 @@
+%html
+  %head
+    %title Jasmine Spec Runner
+    = stylesheet_link_tag "jasmine"
+    = stylesheet_link_tag "jasmine-be-calm"
+    = stylesheet_link_tag "spec"
+    = javascript_include_tag "jasmine-stories", :debug => Rails.env.development?
+    = javascript_include_tag "stories", :debug => Rails.env.development?
+    = csrf_meta_tags
+  %body
