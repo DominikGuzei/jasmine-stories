@@ -61,15 +61,27 @@ pull dependencies. Here's an example `spec/javascripts/foo.js.coffee`:
 #= require foo
 #= require bar
 
-describe "Foo", ->
-  it "it is not bar", ->
-    v = new Foo()
-    expect(v.bar()).toEqual(false)
+feature "Requiring classes with sprockets", ->
 
-describe "Bar", ->
-  it "it is not foo", ->
-    v = new Bar()
-    expect(v.foo()).toEqual(false)
+  summary(
+    'In order to use classes in my specs',
+    'As a user',
+    'I want to require them with sprockets'
+  )
+
+  scenario "Require foo and bar", ->
+    
+    foo = bar = null
+    
+    Given "I have required foo and bar", ->
+      foo = new Foo()
+      bar = new Bar()
+
+    When "I tell foo to jump", ->
+      foo.jump()
+
+    Then "bar should have jumped too", ->
+      (expect bar.jumped).toBe true
 ```
 
 ### Stylesheets
