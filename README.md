@@ -1,15 +1,22 @@
-Jasminerice
+Jasmine Stories: Story driven development with Jasmine
 ===========
 
-Utilizing [Jasmine](http://pivotal.github.com/jasmine/) and taking full advantage
-of the Rails 3.1 asset pipeline. jasmine-stories removes any excuse YOU have for
-not testing your out of control application.
-This project rocks and uses the MIT-LICENSE.
+Utilizing [Jasmine](http://pivotal.github.com/jasmine/) with the addition 
+of [Jasmine-species](http://rudylattae.github.com/jasmine-species/) and taking 
+full advantage of the Rails 3.1 asset pipeline. jasmine-stories removes any 
+excuse YOU have for not testing your out of control application.
+
+This project rocks, is a shameless "fork" of 
+[jasminerice](https://github.com/bradphelan/jasminerice) and uses the MIT-LICENSE.
 
 Headless Testing
 ----------------
 
 See [guard-jasmine](https://github.com/netzpirat/guard-jasmine) for details.
+
+guard-jasmine is configured for jasminerice by default. You have to provide the
+special url of jasmine-stories on the command line: 
+`guard-jasmine -u http://127.0.0.1:8888/jasmine-stories`
 
 Installation
 ------------
